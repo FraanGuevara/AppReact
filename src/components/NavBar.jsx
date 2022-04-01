@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import CartWidget from './CartWidget/CartWidget';
 
 const pages = ['Productos', 'Quienes somos?', 'Contacto'];
 const settings = ['Perfil', 'Cuenta', 'Dashboard', 'Cerrar sesion'];
@@ -103,7 +104,11 @@ export default function ResponsiveAppBar ()  {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <CartWidget/>
+
+              {/* BOTON PERFIL */}
+
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -131,7 +136,7 @@ export default function ResponsiveAppBar ()  {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
