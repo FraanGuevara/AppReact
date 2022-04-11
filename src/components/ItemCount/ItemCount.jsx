@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Button } from '@mui/material';
-import styles from './itemCount.modules.css'
+import styles from './ItemCount.module.css'
 
 export default function ItemCount({stock}) {
+
     const [count, setCount] = useState(0);
 
     function adding(){
@@ -18,18 +19,18 @@ export default function ItemCount({stock}) {
     }
 
     function onAdd(){
-        return `Agregaste ${count} articulos al carrito`
+        return alert(`Agregaste ${count} articulos al carrito`)
     }
 
   return (
     <>
-    <div className='container'>
-        <div className='contenedorItemCount' >
+    <div className={styles.container}>
+        <div className={styles.contenedorItemCount} >
             <Button onClick ={subtract} variant="outlined">Sacar</Button>
-            <p className='contador'>{count}</p>
+            <p className={styles.contador}>{count}</p>
             <Button onClick ={adding} variant="outlined">Agregar</Button>
         </div>
-        <p className='leyendaItemList'>{onAdd()}</p>
+        {/* <p className='leyendaItemList'>{onAdd}</p> */}
     </div>
     </>
   )
