@@ -9,8 +9,7 @@ const customFetch = (time, task) => {
             } else{
                 reject('Error');
             }
-        }, time
-        )
+        }, time)
     })
 }
 

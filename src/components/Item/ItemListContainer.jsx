@@ -13,13 +13,13 @@ export default function ItemListContainer() {
     useEffect(() => {
         customFetch(3000, productos)
             .then(resultado => setItems(resultado))
-            .catch(error => console.log(error));
+            .catch(error => console.log(error))
     }, [items])
 
 
     return (
         <div className={styles.itemListContainer}>
-            <ItemList productos={productos} />
+            <ItemList productos={items} />
         </div>
 
     );
