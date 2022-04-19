@@ -9,8 +9,8 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import ItemCount from '../ItemCount/ItemCount';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -22,7 +22,7 @@ const ExpandMore = styled((props) => {
         duration: theme.transitions.duration.shortest,
     }),
 }));
-export default function Item({ id, nombre, categoria, precio, imagen, descripcion }) {
+export default function Item({ id, nombre, category, precio, imagen, descripcion, cantidad }) {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
@@ -30,15 +30,11 @@ export default function Item({ id, nombre, categoria, precio, imagen, descripcio
     };
 
     return (
-        <Card key={id} sx={{ maxWidth: 345 }}>
+        <>
+        <Card elevation={24} key={id} sx={{ maxWidth: 345 }}>
             <CardHeader
-                action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                    </IconButton>
-                }
                 title={nombre}
-                subheader={categoria}
+                subheader={category}
             />
             <CardMedia
                 component="img"
@@ -67,7 +63,12 @@ export default function Item({ id, nombre, categoria, precio, imagen, descripcio
                     </Typography>
                 </CardContent>
             </Collapse>
-            <ItemCount stock = {6} />
+            <Link to={'item/'+id}>
+                <Button variant="outlined" >Ver detalle</Button>
+            </Link>
+            
         </Card>
+        </>
+        
     )
 }

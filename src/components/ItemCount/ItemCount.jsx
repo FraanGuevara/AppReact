@@ -26,11 +26,11 @@ export default function ItemCount({stock}) {
     <>
     <div className={styles.container}>
         <div className={styles.contenedorItemCount} >
-            <Button onClick ={subtract} variant="outlined">Sacar</Button>
+            <Button className={styles.botones} onClick ={subtract} color='error' variant="outlined"> - </Button>
             <p className={styles.contador}>{count}</p>
-            <Button onClick ={adding} variant="outlined">Agregar</Button>
+            <Button className={styles.botones} onClick ={adding} color="success" variant="outlined">+</Button>
+            <Button variant="outlined" > ADD TO CART</Button>
         </div>
-        {/* <p className='leyendaItemList'>{onAdd}</p> */}
     </div>
     </>
   )

@@ -10,8 +10,10 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import CartWidget from './CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
-const pages = ['Productos', 'Quienes somos?', 'Contacto'];
+
+const pages = ['Remeras', 'Buzos', 'Pantalones'];
 const settings = ['Perfil', 'Cuenta', 'Dashboard', 'Cerrar sesion'];
 
 export default function ResponsiveAppBar ()  {
@@ -21,17 +23,12 @@ export default function ResponsiveAppBar ()  {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+
 
   return (
     <AppBar position="static">
@@ -43,9 +40,9 @@ export default function ResponsiveAppBar ()  {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            NaturalDiet{/* Logo */}
+            AuraFlow{/* Logo */}
           </Typography>
-
+          {/* ----------------------------------------------------------- */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -55,8 +52,9 @@ export default function ResponsiveAppBar ()  {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon/>
             </IconButton>
+            
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -75,66 +73,77 @@ export default function ResponsiveAppBar ()  {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {/* Boton HOME */}
+              <Link to='/Home'>
+                <MenuItem key='Home' onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Home</Typography>
                 </MenuItem>
+              </Link>
+              {/* Boton ALL */}
+              <Link to='/All'>
+                <MenuItem key='Home' onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">All</Typography>
+                </MenuItem>
+              </Link>
+
+              {pages.map((page) => (
+                <Link to={'/category/'+ page}>
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
+
+          {/* ----------------------------------------------------------- */}
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            NaturalDiet{/* Logo Responsive*/}
+            AuraFlow{/* Logo Responsive*/}
           </Typography>
+
+          {/* ----------------------------------------------------------- */}
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {/* Boton HOME */}
+            <Link to= '/Home'>
               <Button
+              key='Home'
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block' }}>
+                Home
+              </Button>
+            </Link>
+
+            {/* Boton ALL */}
+            <Link to= '/'>
+              <Button
+              key='All'
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block' }}>
+                All
+              </Button>
+            </Link>
+            
+            {/* Botones CATEGORIAS */}
+            {pages.map((page) => (
+              /* Link para que a cada "page" se le asigne el link de router con su mismo nombre */
+              <Link to={'/category/'+ page}>
+                <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+                >
+                  {page} 
+                </Button>
+              </Link>
             ))}
           </Box>
-
           <CartWidget/>
-
-              {/* BOTON PERFIL */}
-
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
