@@ -3,7 +3,7 @@ import imagenes from "../img/imagenes"
 export const productos = [{
         id: 5,
         nombre: "Remera Nike",
-        category: 'Remeras',
+        category: 't-shirts',
         precio: '1200',
         imagen: imagenes.remeraNike,
         descripcion: 'Soy una remera',
@@ -13,7 +13,7 @@ export const productos = [{
     {
         id: 10,
         nombre: "Buzo DC",
-        category: 'Buzos',
+        category: 'sweatshirt',
         precio: '3500',
         imagen: imagenes.buzoDC,
         descripcion: 'Soy un buzo',
@@ -22,7 +22,7 @@ export const productos = [{
     {
         id: 13,
         nombre: "Jeans Levis",
-        category: 'Pantalones',
+        category: 'pants',
         precio: '5500',
         imagen: imagenes.jeans,
         descripcion: 'Soy un pantalon',
@@ -31,7 +31,7 @@ export const productos = [{
     {
         id: 22,
         nombre: "Remera Adidas",
-        category: 'Remeras',
+        category: 't-shirts',
         precio: '1500',
         imagen: imagenes.remeraAdidas,
         descripcion: 'Soy una remera',
@@ -41,7 +41,7 @@ export const productos = [{
     {
         id:23,
         nombre: "Buzo Rip Curl",
-        category: 'Buzos',
+        category: 'sweatshirt',
         precio: '4000',
         imagen: imagenes.buzoRipCurl,
         descripcion: 'Soy un buzo',
@@ -50,7 +50,7 @@ export const productos = [{
     {
         id: 44,
         nombre: "Joggin Nike",
-        category: 'Pantalones',
+        category: 'pants',
         precio: '3800',
         imagen: imagenes.jogginNike,
         descripcion: 'Soy un Joggin',

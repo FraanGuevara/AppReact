@@ -4,8 +4,9 @@ import {productos} from '../../utils/productos'
 import {customFetch} from '../../utils/customFetch'
 import styles from './ItemListContainer.module.css'
 import { useParams } from 'react-router-dom';
-
-
+import { Container } from '@mui/material';
+import { CircularProgress } from '@mui/material';
+import Loading from '../Loading/Loading';
 
 export default function ItemListContainer() {
 
@@ -32,11 +33,14 @@ export default function ItemListContainer() {
         <>
         {/* Operador ternario para que muestre el Loading hasta que termine en este caso el setTimeOut*/}
         {loading ? 
-        (<h1>Cargando productos</h1>) :
-        (<div className={styles.itemListContainer}>
-            <ItemList productos={items} />
-        </div>)}
-        
+        (   <>
+            <Loading/>
+            </>) :
+        (
+            <div id={styles.itemListContainer}>
+                < ItemList productos={items} />
+            </div>
+        )}
         </>
         
 

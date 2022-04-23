@@ -1,0 +1,36 @@
+#navbarAllproducts{
+    background-color: #6357f6; ;
+    
+}
+
+#botonesLink{
+    text-decoration: none;
+    margin: 5px;
+    color: black;
+
+}
+
+#menuNavbar{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+}
+
+
+#botonesStyle{
+    background-color: #6357f6;
+    color: white;
+    width: 100%;
+}
+
+#botonStyleDisable{
+    background-color: white;
+    color: #3a354d;
+    font-weight: bold;
+    border-radius: 0;
+    width: 100%;
+    margin-top: 3px;
+    box-shadow: none;
+}
+
