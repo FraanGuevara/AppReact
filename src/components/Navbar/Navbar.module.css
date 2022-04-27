@@ -34,3 +34,18 @@
     box-shadow: none;
 }
 
+#textoNavbar{
+    overflow: hidden;
+    white-space:nowrap;
+    animation: cambiar 15s infinite;
+}
+
+@keyframes cambiar {
+    0%{margin-right: -150%}
+
+    40%{margin-right: 0}
+    50%{margin-right: 0}
+    60%{margin-right: 0}
+
+    100%{margin-right: 150%}
+}

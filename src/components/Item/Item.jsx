@@ -34,11 +34,13 @@ export default function Item({ id, nombre, category, precio, imagen, descripcion
                 title={nombre}
                 subheader={category}
             />
-            <CardMedia
+            <Link to={'/category/'+ category +'/item/'+id}>
+            <CardMedia id={styles.imagenProducto}
                 component="img"
                 height="400"
                 image={imagen}
             />
+            </Link>
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
                     Price ${precio}

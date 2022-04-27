@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
 }
 
 .contenedorItemCount{
@@ -11,13 +11,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    border:solid 2px white;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .contador{
     margin: 0 15px;
+    
 }
 
 .leyendaItemList{
     margin: 0;
+}
+
+#botones{
+    color:#7f77e0;
+    height: 50px;
+}
+
+
+#addToCart{
+    border: #7f77e0 solid 2px;
+    background-color: #7f77e0;
+    color:white;
+}
+
+#addToCartDiv :hover{
+    border: #7f77e0 solid 2px;
+    color:#7f77e0;
+    background-color: white;
 }

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Button } from '@mui/material';
 import styles from './ItemCount.module.css'
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function ItemCount({stock}) {
 
@@ -26,11 +28,18 @@ export default function ItemCount({stock}) {
     <>
     <div className={styles.container}>
         <div className={styles.contenedorItemCount} >
-            <Button className={styles.botones} onClick ={subtract} color='error' variant="outlined"> - </Button>
+
+            <Button id={styles.botones} onClick ={subtract}> <ArrowBackIosIcon sx={{ fontSize: 15 }}/> </Button>
+
             <p className={styles.contador}>{count}</p>
-            <Button className={styles.botones} onClick ={adding} color="success" variant="outlined">+</Button>
-            <Button variant="outlined" > ADD TO CART</Button>
+
+            <Button id={styles.botones} onClick ={adding} > <ArrowForwardIosIcon sx={{ fontSize: 15 }}/> </Button>
+
         </div>
+            <div id={styles.addToCartDiv}>
+
+            <Button variant="outlined" id={styles.addToCart} > ADD TO CART</Button>
+            </div>
     </div>
     </>
   )

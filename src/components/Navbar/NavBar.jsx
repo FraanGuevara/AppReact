@@ -17,11 +17,9 @@ import { Stack } from '@mui/material';
 
 
 const pages = ['t-shirts', 'sweatshirt', 'pants'];
-const settings = ['Perfil', 'Cuenta', 'Dashboard', 'Cerrar sesion'];
 
 export default function ResponsiveAppBar ()  {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -34,7 +32,13 @@ export default function ResponsiveAppBar ()  {
 
 
   return (
-    <AppBar id={styles.navbarAllproducts} position="static">
+    <>
+    <div style={{backgroundColor:'black',overflow:'hidden', textOverflow:'clip'}}>
+      <div id={styles.textoNavbar} style={{backgroundColor:'black', color:'white', height:'35px', display:'flex', justifyContent:'center', alignItems:'center'}}>
+      3 AND 6 FREE INTEREST QUOTES 💳 ㅤㅤㅤㅤ|ㅤㅤㅤㅤFREE SHIPPING OVER $7.500 🚚
+      </div>
+    </div>
+    <AppBar id={styles.navbarAllproducts} position="relative" >
       <Container  maxWidth="xl">
         <Toolbar  disableGutters>
           <Typography
@@ -157,5 +161,7 @@ export default function ResponsiveAppBar ()  {
         </Toolbar>
       </Container>
     </AppBar>
+    </>
+    
   );
 };

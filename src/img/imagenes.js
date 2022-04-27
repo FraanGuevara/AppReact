@@ -6,6 +6,7 @@ import remeraAdidas from './remeraAdidas.jpg'
 import buzoRipCurl from './buzoRipCurl.jpg'
 import jogginNike from './jogginNike.jpg'
 
+
 export default{
     "carrito": carrito,
     "remeraNike" : remeraNike,

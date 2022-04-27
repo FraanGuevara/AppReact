@@ -42,7 +42,7 @@ export const productos = [{
         id:23,
         nombre: "Buzo Rip Curl",
         category: 'sweatshirt',
-        precio: '4000',
+        precio: '4.000',
         imagen: imagenes.buzoRipCurl,
         descripcion: 'Soy un buzo',
         cantidad: 3
@@ -51,7 +51,7 @@ export const productos = [{
         id: 44,
         nombre: "Joggin Nike",
         category: 'pants',
-        precio: '3800',
+        precio: '3.800',
         imagen: imagenes.jogginNike,
         descripcion: 'Soy un Joggin',
         cantidad: 10

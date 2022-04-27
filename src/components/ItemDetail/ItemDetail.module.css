@@ -1,3 +1,32 @@
 .contenedor{
-    display: flex;
+    display: grid;
+    justify-content: center;
+    /* align-items: center; */
+    grid-template-columns: 1.5fr 1fr;
+    margin: 7% 10%;
+    width: 1200px;
 }
+
+#img{
+    /* width: 500px; */
+    max-height: 500px;
+    border-radius: 10px;
+}
+
+#divImg{
+    display: flex;
+    justify-content: center;
+}
+
+#divItemCount{
+    margin-top: 3%;
+}
+
+#DivNameDesc{
+    width: 100%;
+}
+
+#textCategory{
+    color: #0077ff;
+}
+
