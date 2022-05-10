@@ -40,7 +40,6 @@ export default function Item({ id, nombre, category, precio, imagen, descripcion
                 height="250"
                 image={imagen}
             />
-            {console.log(imagen)}
             </Link>
             <CardContent>
                 <Typography variant="body2" color="text.secondary">

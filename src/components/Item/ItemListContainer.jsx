@@ -25,53 +25,54 @@ export default function ItemListContainer() {
         setLoading(true);
 
         getDocs(products)
-        .then((res)=>{
-            try {
-                setItems(res.docs.map((item) => ({ id: item.id, ...item.data() })))
-            } catch (error) {
-                console.log(error)
-            }finally{
-                setLoading(false)
-            }
-        })
-    },[categoryId])
+            .then((res) => {
+                try {
+                    const data = res.docs.map((item) => ({ id: item.id, ...item.data() }))
 
-            /* .then((res) => {
-                setItems(res.docs.map((item) => ({ id: item.id, ...item.data() })))
-            });
-            console.log(items);
-            .catch (error => console.log(error));
-            .finally(() => setLoading(false));
-}, []) */
+                    const productosFiltrados = data.filter((data) => data.category === categoryId);
 
+                    if (categoryId) {
+                        setItems(productosFiltrados);
+                    } else {
+                        setItems(data);
+                    }
+
+                } catch (error) {
+                    console.log(error)
+                } finally {
+                    setLoading(false)
+                }
 
 
 
+            })
+    }, [categoryId])
 
-/* USEEFFECT PARA TRAER LOS PRODUCTOS HARDCODEADOS */
-/* useEffect(() => {
-    setLoading(true)
-    customFetch(1000, productos, categoryId)
-        .then(resultado => setItems(resultado))
-        .catch(error => console.log(error))
-        Setear a false el setLoading para que desaparezca el ternario y muestre el item
-        .finally(() => setLoading(false))
-}, [categoryId])
- */
+    /* USEEFFECT PARA TRAER LOS PRODUCTOS HARDCODEADOS */
+    /* useEffect(() => {
+        setLoading(true)
+        customFetch(1000, productos, categoryId)
+            .then(resultado => setItems(resultado))
+            .catch(error => console.log(error))
+            Setear a false el setLoading para que desaparezca el ternario y muestre el item
+            .finally(() => setLoading(false))
+    }, [categoryId])
+     */
 
-return (
-    <>
-        {/* Operador ternario para que muestre el Loading hasta que termine en este caso el setTimeOut*/}
-        {loading ?
-            (<>
-                <Loading />
-            </>) :
-            (
-                <div id={styles.itemListContainer}>
-                    < ItemList productos={items} />
-                </div>
-            )}
-    </>
+    return (
+        <>
+            {/* Operador ternario para que muestre el Loading hasta que termine en este caso el setTimeOut*/}
+            {loading ?
+                (<>
+                    <Loading />
+                </>) :
+                (
+                    <div id={styles.itemListContainer}>
+                        < ItemList productos={items} />
+                    </div>
+                )}
+        </>
 
 
-)}
+    )
+}

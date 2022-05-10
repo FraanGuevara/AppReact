@@ -14,7 +14,6 @@ export default function promise() {
                 //reject(null)
             })
     
-            console.log(pago);
     
             pago
             .then((res) => {

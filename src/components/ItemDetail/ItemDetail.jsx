@@ -5,6 +5,7 @@ import TallesItemDetail from './BodyItemDetail/TallesItemDetail'
 import IconosItemDetail from './BodyItemDetail/IconosItemDetail'
 import { Link, useParams } from 'react-router-dom';
 import { style } from '@mui/system'
+import Carrousel from './BodyItemDetail/Carrousel'
 
 export default function ItemDetail(product) {
 
@@ -29,7 +30,8 @@ export default function ItemDetail(product) {
 
             {/* Imagen */}
             <div id={styles.divImg}>
-                <img id={styles.img} src= {imagen} alt={nombre}/>
+                <Carrousel imagen={imagen}/>
+                {/* <img id={styles.img} src= {imagen} alt={nombre}/> */}
             </div>
             
             {/* Nombre y descripcion */}
@@ -40,7 +42,7 @@ export default function ItemDetail(product) {
                 <h2> US${precio}</h2>
                 <h5 style={{color:'#00a650', fontFamily:'barlow semi condensed,sans-serif', fontWeight:'900'}}>3 AND 6 FREE INTEREST QUOTES</h5>
                 <h3 style={{textDecoration:'underline'}}>DESCRIPTION</h3>
-                <h4>{descripcion}</h4>
+                <p>{descripcion}</p>
                 <br />
                 <br/>
                 <br/>

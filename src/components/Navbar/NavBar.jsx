@@ -16,7 +16,7 @@ import { Stack } from '@mui/material';
 
 
 
-const pages = ['t-shirts', 'sweatshirt', 'pants'];
+const pages = ['classic', 'car-and-motocycle', 'NBA', 'patches', 'trucker'];
 
 export default function ResponsiveAppBar ()  {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -35,7 +35,7 @@ export default function ResponsiveAppBar ()  {
     <>
     <div style={{backgroundColor:'black',overflow:'hidden', textOverflow:'clip'}}>
       <div id={styles.textoNavbar} style={{backgroundColor:'black', color:'white', height:'35px', display:'flex', justifyContent:'center', alignItems:'center'}}>
-      3 AND 6 FREE INTEREST QUOTES 💳 ㅤㅤㅤㅤ|ㅤㅤㅤㅤFREE SHIPPING OVER $7.500 🚚
+      3 AND 6 FREE INTEREST QUOTES 💳 ㅤㅤㅤㅤ|ㅤㅤㅤㅤFREE SHIPPING 🚚
       </div>
     </div>
     <AppBar id={styles.navbarAllproducts} position="relative" >

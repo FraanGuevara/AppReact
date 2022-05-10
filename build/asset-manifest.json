@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a4ca11e.css",
-    "main.js": "/static/js/main.a42e0a2d.js",
+    "main.css": "/static/css/main.28707925.css",
+    "main.js": "/static/js/main.ee8e6d71.js",
     "static/js/787.c1112931.chunk.js": "/static/js/787.c1112931.chunk.js",
     "static/media/buzoDC.png": "/static/media/buzoDC.8c7117ea152f1a86b3a4.png",
     "static/media/buzoRipCurl.jpg": "/static/media/buzoRipCurl.c05a09f30910606a1462.jpg",
     "static/media/jogginNike.jpg": "/static/media/jogginNike.263341c643dd73d6cf32.jpg",
-    "static/media/remeraAdidas.jpg": "/static/media/remeraAdidas.afc6c7b4fe95da92acf5.jpg",
     "static/media/remeraNike.webp": "/static/media/remeraNike.f20a27f8030356d2f1ea.webp",
     "static/media/jeans.jpg": "/static/media/jeans.242d6926abcbca735cdd.jpg",
+    "static/media/gorra-adidas-new.webp": "/static/media/gorra-adidas-new.03f61222f37e7bb5204c.webp",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "static/media/carrito.svg": "/static/media/carrito.efcc1fd984403d30a10c7e0f7a87db12.svg",
-    "main.1a4ca11e.css.map": "/static/css/main.1a4ca11e.css.map",
-    "main.a42e0a2d.js.map": "/static/js/main.a42e0a2d.js.map",
+    "main.28707925.css.map": "/static/css/main.28707925.css.map",
+    "main.ee8e6d71.js.map": "/static/js/main.ee8e6d71.js.map",
     "787.c1112931.chunk.js.map": "/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a4ca11e.css",
-    "static/js/main.a42e0a2d.js"
+    "static/css/main.28707925.css",
+    "static/js/main.ee8e6d71.js"
   ]
 }
