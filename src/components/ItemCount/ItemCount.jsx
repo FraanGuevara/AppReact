@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Button } from '@mui/material';
 import styles from './ItemCount.module.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { CartContext } from '../Context/CartContext'
 
-export default function ItemCount({stock}) {
 
-    const [count, setCount] = useState(0);
+export default function ItemCount({stock, product}) {
+    
+    const [count, setCount] = useState(1);
+    const {addToCart} = useContext(CartContext);
+    const itemAddCount = {...product, count}
+
+
 
     function adding(){
         if(count < stock){
@@ -20,9 +26,9 @@ export default function ItemCount({stock}) {
         }
     }
 
-    function onAdd(){
+/*     function onAdd(){
         return alert(`Agregaste ${count} articulos al carrito`)
-    }
+    } */
 
   return (
     <>
@@ -36,10 +42,13 @@ export default function ItemCount({stock}) {
             <Button id={styles.botones} onClick ={adding} > <ArrowForwardIosIcon sx={{ fontSize: 15 }}/> </Button>
 
         </div>
-            <div id={styles.addToCartDiv}>
-
-            <Button variant="outlined" id={styles.addToCart} > ADD TO CART</Button>
-            </div>
+            {/* <div id={styles.addToCartDiv}> */}
+            <Button variant="outlined" id={styles.addToCart} 
+            onClick={() =>{
+                addToCart(itemAddCount);
+                setCount(1);
+                }}> ADD TO CART</Button>
+            {/* </div> */}
     </div>
     </>
   )

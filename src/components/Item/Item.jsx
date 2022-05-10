@@ -37,20 +37,21 @@ export default function Item({ id, nombre, category, precio, imagen, descripcion
             <Link to={'/category/'+ category +'/item/'+id}>
             <CardMedia id={styles.imagenProducto}
                 component="img"
-                height="400"
+                height="250"
                 image={imagen}
             />
+            {console.log(imagen)}
             </Link>
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    Price ${precio}
+                    Price US${precio}
                 </Typography>
             </CardContent>
             {/* Boton Ver detalle */}
             <div id={styles.divButton}>
             <Link style={{textDecoration:'none'} }/* to={'item/'+id} */
             to={'/category/'+ category +'/item/'+id}>
-                <Button id={styles.button} variant="outlined"  > Ver detalle</Button>
+                <Button id={styles.button} variant="outlined" > Ver detalle</Button>
             </Link>
             </div>
 

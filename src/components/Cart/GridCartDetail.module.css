@@ -1,0 +1,26 @@
+.sectionItemCart{
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3% 2%;
+    border: solid 1px red;
+    border-radius: 10px;
+}
+
+.botonRemoveCarrito{
+    color: black !important;
+}
+
+.imagenCard{
+    margin: 0 10%;
+    border-radius: 10px;
+}
+
+.cardComprar{
+    border: solid 1px red;
+    width: 300px;
+    height: 400px;
+    margin: 5%;
+}
+

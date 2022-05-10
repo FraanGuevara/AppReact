@@ -24,6 +24,7 @@ export default function TallesItemDetail() {
           <FormControlLabel value="XL" control={<Radio sx={{color: grey[900],'&.Mui-checked': {color: deepPurple[300],},}} />} label="XL" />
           <FormControlLabel value="2XL" control={<Radio sx={{color: grey[900],'&.Mui-checked': {color: deepPurple[300],},}} />} label="2XL" />
         </RadioGroup>
+        {console.log(FormControlLabel.value)}
       </FormControl>
     </>
 

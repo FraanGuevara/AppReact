@@ -2,7 +2,7 @@ import carrito from './carrito.svg';
 import remeraNike from './remeraNike.webp'
 import buzoDC from './buzoDC.png'
 import jeans from './jeans.jpg'
-import remeraAdidas from './remeraAdidas.jpg'
+import gorraAdidas from './gorra-adidas-new.webp'
 import buzoRipCurl from './buzoRipCurl.jpg'
 import jogginNike from './jogginNike.jpg'
 
@@ -12,7 +12,7 @@ export default{
     "remeraNike" : remeraNike,
     "buzoDC" : buzoDC,
     "jeans" : jeans,
-    "remeraAdidas": remeraAdidas,
+    "gorraAdidas": gorraAdidas,
     "buzoRipCurl" :buzoRipCurl ,
     "jogginNike": jogginNike,
 }

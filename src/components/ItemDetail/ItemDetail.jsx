@@ -8,12 +8,14 @@ import { style } from '@mui/system'
 
 export default function ItemDetail(product) {
 
+
+
     /* Destructuring del producto*/
     const {imagen, nombre, descripcion, cantidad, precio} = product
 
     const {id} = useParams();
     const {categoryId} = useParams();
-    console.log({categoryId})
+
     return (
     <>
         <div style={{fontWeight:'500', width:'30%', backgroundColor:'#ffd7ba', borderRadius:'0px 5px 5px 0'}}>
@@ -35,13 +37,11 @@ export default function ItemDetail(product) {
                 <h1>{nombre}</h1>
                 <hr/>
                 <p> </p>
-                <h2> ${precio}</h2>
+                <h2> US${precio}</h2>
                 <h5 style={{color:'#00a650', fontFamily:'barlow semi condensed,sans-serif', fontWeight:'900'}}>3 AND 6 FREE INTEREST QUOTES</h5>
-                <h4 style={{textDecoration:'underline'}}>DESCRIPTION</h4>
-                <h5>{descripcion}</h5>
+                <h3 style={{textDecoration:'underline'}}>DESCRIPTION</h3>
+                <h4>{descripcion}</h4>
                 <br />
-                <p>Sizes</p>
-                <TallesItemDetail/>
                 <br/>
                 <br/>
                 <br/>
@@ -51,7 +51,9 @@ export default function ItemDetail(product) {
 
             {/* Div item count */}
             <div id={styles.divItemCount}>
-                <ItemCount stock = {cantidad} />
+                <ItemCount 
+                stock = {cantidad}
+                product = {product}/>
             </div>
 
             {/* Div Iconos */}
