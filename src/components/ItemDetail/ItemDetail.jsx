@@ -12,59 +12,58 @@ export default function ItemDetail(product) {
 
 
     /* Destructuring del producto*/
-    const {imagen, nombre, descripcion, cantidad, precio} = product
+    const { imagen, nombre, descripcion, cantidad, precio } = product
 
-    const {id} = useParams();
-    const {categoryId} = useParams();
+    const { id } = useParams();
+    const { categoryId } = useParams();
 
     return (
-    <>
-        <div style={{fontWeight:'500', width:'30%', backgroundColor:'#ffd7ba', borderRadius:'0px 5px 5px 0'}}>
-        <Link id={styles.textCategory} to={'/'}>All products </Link>
-        {'>'} Category {'>'}
-        <Link id={styles.textCategory} to={'/category/'+categoryId}>{categoryId}</Link> {'>'} {nombre}
-        </div>
-        
-
-        <div className={styles.contenedor}>
-
-            {/* Imagen */}
-            <div id={styles.divImg}>
-                <Carrousel imagen={imagen}/>
-                {/* <img id={styles.img} src= {imagen} alt={nombre}/> */}
-            </div>
-            
-            {/* Nombre y descripcion */}
-            <div id={styles.DivNameDesc}>
-                <h1>{nombre}</h1>
-                <hr/>
-                <p> </p>
-                <h2> US${precio}</h2>
-                <h5 style={{color:'#00a650', fontFamily:'barlow semi condensed,sans-serif', fontWeight:'900'}}>3 AND 6 FREE INTEREST QUOTES</h5>
-                <h3 style={{textDecoration:'underline'}}>DESCRIPTION</h3>
-                <p>{descripcion}</p>
-                <br />
-                <br/>
-                <br/>
-                <br/>
-                <hr/>
-                
+        <>
+            <div id={styles.barraNavegacion}>
+                <Link id={styles.textCategory} to={'/'}>All products </Link>
+                {'>'} Category {'>'}
+                <Link id={styles.textCategory} to={'/category/' + categoryId}>{categoryId}</Link> {'>'} {nombre}
             </div>
 
-            {/* Div item count */}
-            <div id={styles.divItemCount}>
-                <ItemCount 
-                stock = {cantidad}
-                product = {product}/>
+
+            <div className={styles.contenedor}>
+
+                {/* Imagen */}
+                <div id={styles.divImg}>
+                    <Carrousel imagen={imagen} />
+                </div>
+
+                {/* Nombre y descripcion */}
+                <div id={styles.DivNameDesc}>
+                    <div id={styles.nombrePrecio}>
+                        <h1 style={{ color: '#0077ff' }}>{nombre}</h1>
+                        <hr />
+                        <p> </p>
+                        <h2> US${precio}</h2>
+                        <h5 style={{ color: '#00a650', fontFamily: 'barlow semi condensed,sans-serif', fontWeight: '900' }}>3 AND 6 FREE INTEREST QUOTES</h5>
+                    </div>
+                    <div id={styles.descripcion}>
+                    <h3 style={{ textDecoration: 'underline', marginBottom: '0' }}>DESCRIPTION</h3>
+                    <p style={{ margin: 0, marginBottom:'20%' }}>{descripcion}</p>
+                    {<hr />}
+                    </div>
+
+                </div>
+
+                {/* Div item count */}
+                <div id={styles.divItemCount}>
+                    <ItemCount
+                        stock={cantidad}
+                        product={product} />
+                </div>
+
+                {/* Div Iconos */}
+                <div id={styles.iconosDetail}>
+                    <IconosItemDetail />
+                </div>
             </div>
 
-            {/* Div Iconos */}
-            <div>
-            <IconosItemDetail/>
-            </div>
-        </div>
-        
 
-    </>
+        </>
     )
 }

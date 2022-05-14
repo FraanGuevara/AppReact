@@ -21,7 +21,7 @@ export default function CartDetail() {
     <>
     {loading ? 
     (<div style={{display:'flex', alignItems:'center', justifyContent:'center', marginTop:'20%'}}>
-      <Link to='/' style={{color:'#6357f6'}}>
+      <Link to='/' style={{color:'#0077ff'}}>
         <h2>
           You have an empty cart, start shopping
           <RemoveShoppingCartIcon style={{height:35, width:80}}/>

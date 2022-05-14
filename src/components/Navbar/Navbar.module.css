@@ -1,6 +1,5 @@
 #navbarAllproducts{
-    background-color: #6357f6; ;
-    
+    background-color: #2b2d42
 }
 
 #botonesLink{
@@ -19,7 +18,7 @@
 
 
 #botonesStyle{
-    background-color: #6357f6;
+    background-color: #f77f00;
     color: white;
     width: 100%;
 }
@@ -49,3 +48,5 @@
 
     100%{margin-right: 150%}
 }
+
+

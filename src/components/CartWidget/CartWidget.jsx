@@ -12,7 +12,7 @@ export default function CartWidget() {
         <>
             <Link to='/cart'>
                 <IconButton >
-                    <ShoppingCartIcon style={{width:30, height:'auto', color:'white'}}alt="carrito" />
+                    <ShoppingCartIcon style={{width:40, height:'auto', color:'#f77f00'}}alt="carrito" />
                 </IconButton>
             </Link>
 

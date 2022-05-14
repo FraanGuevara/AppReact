@@ -18,6 +18,7 @@
 
 .contador{
     margin: 0 15px;
+    font-weight: 600;
     
 }
 
@@ -26,19 +27,14 @@
 }
 
 #botones{
-    color:#7f77e0;
+    color:#f77f00;
     height: 50px;
 }
 
 
 #addToCart{
-    border: #7f77e0 solid 2px;
-    background-color: #7f77e0;
+    border: #f77f00 solid 2px;
+    background-color: #f77f00;
     color:white;
 }
 
-#addToCartDiv :hover{
-    border: #7f77e0 solid 2px;
-    color:#7f77e0;
-    background-color: white;
-}

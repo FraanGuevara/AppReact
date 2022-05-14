@@ -1,34 +1,150 @@
-.contenedor{
+.contenedor {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 1.5fr 1fr;
     margin: 7% 10%;
-    width: 1200px;
+    width: auto;
 }
 
-#img{
+#img {
     /* width: 500px; */
     max-height: 500px;
     border-radius: 10px;
 }
 
-#divImg{
+#divImg {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
 }
 
-#divItemCount{
+#divItemCount {
     margin-top: 3%;
 }
 
-#DivNameDesc{
+/* #DivNameDesc{
     width: 100%;
-}
+} */
 
-#textCategory{
+#textCategory {
     color: #0077ff;
 }
 
+.divIconos {
+    display: grid;
+    width: 45px;
+}
+
+.parrafoIconos {
+    text-align: center;
+    font-weight: bold;
+    color: #f77f00;
+}
+
+#imagenCarrousel {
+    max-width: 500px;
+    max-height: 450px;
+    margin: auto;
+}
+
+#barraNavegacion {
+    font-weight: 500;
+    width: 30%;
+    background-color: #ffd7ba;
+    border-radius: 0px 5px 5px 0;
+}
+
+#carrousel {
+    height: 500px;
+    width: 500px;
+}
+
+@media (max-width: 1350px) {
+    .contenedor {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1.5fr 1fr;
+        margin: 3% 5%;
+        width: auto;
+    }
+
+    #img {
+        max-height: 200px;
+        border-radius: 10px;
+    }
+    
+    #carrousel {
+        margin-top: 15%;
+        height: 450px;
+        width: 400px;
+    }
+    #imagenCarrousel {
+        max-width: 400px;
+        max-height: 350px;
+        margin: auto;
+    }
+
+    #DivNameDesc {
+        font-size: 15px;
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 960px) {
+    #barraNavegacion {
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 10px;
+        width: 100%;
+        background-color: #ffd7ba;
+        border-radius: 0px 5px 5px 0;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "descripcion"
+            "count"
+            "iconos";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: auto;
+    }
+
+    #img {
+        max-height: 200px;
+        border-radius: 10px;
+    }
+    
+    #carrousel {
+        margin-top: 15%;
+        height: 350px;
+        width: 300px;
+    }
+    #imagenCarrousel {
+        max-width: 300px;
+        max-height: 250px;
+        margin: auto;
+    }
+
+    #divItemCount {
+        grid-area: count;
+        margin-top: 0;
+        margin-bottom: 15%;
+    }
+
+    #DivNameDesc {
+        font-size: 15px;
+        grid-area: descripcion;
+        margin: 0;
+    }
+
+    #iconosDetail{
+        margin-top: 10%;
+    }
+}

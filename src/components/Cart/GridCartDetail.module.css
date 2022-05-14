@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .sectionItemCart{
-    width: 700px;
+    width: 85%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 3% 2%;
-    border: solid 1px red;
+    border-bottom: solid 2px rgba(143, 143, 143, 0.5);
     border-radius: 10px;
+    background-color: #edf2f4;
 }
 
 .botonRemoveCarrito{
@@ -13,14 +16,106 @@
 }
 
 .imagenCard{
-    margin: 0 10%;
     border-radius: 10px;
+    object-fit: contain;
 }
 
+/* ----------------------------------------- */
 .cardComprar{
-    border: solid 1px red;
-    width: 300px;
-    height: 400px;
+    background-color: #2b2d42;
+    color: #fff;
+    width: 350px;
+    height: auto;
     margin: 5%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    position: relative;
+    right: 0;
 }
 
+.summary{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 100;
+    font-size: 30px;
+}
+.cantidadProductos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.subtotal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.envios{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.envioFree{
+    color: green;
+    display: inline;
+    font-size: 15px;
+}
+
+.tax{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.totalParrafo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 100;
+}
+
+#botonCheckOut{
+    height: 50px;
+    margin: 10px 0 ;
+    background-color: #f77f00;
+    color: #fff;
+    border-radius: 50px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+#botonPaypal{
+    height: 50px;
+    margin: 10px 0;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.imgPaypal{
+    width: 60px;
+}
+
+#h2Cart{
+    font-family: 'Bebas Neue', cursive;
+    font-size:40px;
+    color:#f77f00;
+}

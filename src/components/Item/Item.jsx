@@ -20,16 +20,14 @@ const ExpandMore = styled((props) => {
         duration: theme.transitions.duration.shortest,
     }),
 }));
-export default function Item({ id, nombre, category, precio, imagen, descripcion, cantidad }) {
+
+export default function Item({ id, nombre, category, precio, imagen}) {
     const [expanded, setExpanded] = React.useState(false);
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
 
     return (
         <>
-        <Card elevation={24} key={id} sx={{ maxWidth: 345}}>
+        <Card elevation={24} key={id} sx={{ maxWidth: 345, color:'#f77f00'}}>
             <CardHeader
                 title={nombre}
                 subheader={category}
@@ -42,7 +40,7 @@ export default function Item({ id, nombre, category, precio, imagen, descripcion
             />
             </Link>
             <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="subtitle2" color="text.primary">
                     Price US${precio}
                 </Typography>
             </CardContent>
@@ -50,7 +48,7 @@ export default function Item({ id, nombre, category, precio, imagen, descripcion
             <div id={styles.divButton}>
             <Link style={{textDecoration:'none'} }/* to={'item/'+id} */
             to={'/category/'+ category +'/item/'+id}>
-                <Button id={styles.button} variant="outlined" > Ver detalle</Button>
+                <Button id={styles.button} variant="text" > See detail</Button>
             </Link>
             </div>
 

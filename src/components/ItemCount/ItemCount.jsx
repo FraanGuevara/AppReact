@@ -46,7 +46,8 @@ export default function ItemCount({stock, product}) {
             <Button variant="outlined" id={styles.addToCart} 
             onClick={() =>{
                 addToCart(itemAddCount);
-                setCount(1);
+                setCount(1)
+                ;
                 }}> ADD TO CART</Button>
             {/* </div> */}
     </div>
