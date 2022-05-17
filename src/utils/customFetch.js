@@ -1,4 +1,3 @@
-import {productos} from '../utils/productos'
 let isOk = true;
 
 export const customFetch = (time, data, categoryId) => {
@@ -16,15 +15,3 @@ export const customFetch = (time, data, categoryId) => {
     })
 }
 
-export const traerProducto = (time, id) => {
-    return new Promise((resolve, reject) => {
-        const productoSeleccionado = productos.find((producto)=> producto.id === Number(id))
-        setTimeout(() =>{
-            if(id){
-                resolve(productoSeleccionado);
-            } else{
-                reject('Error');
-            }
-        }, time)
-    })
-}

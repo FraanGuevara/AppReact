@@ -9,11 +9,11 @@ export default function TestFormulario() {
     function terminarCompra() {
  */
         //example buyer
-        /* let buyer = {
-        buyer: { name, phone, email },
-        items: [{ id, title, price },{ id, title, price }],
-        total: 100,   
-        }; */
+/* let buyer = {
+buyer: { name, phone, email },
+items: [{ id, title, price },{ id, title, price }],
+total: 100,   
+}; */
 
 /*         alert(‘quiere terminar la compra ’ + name + email + phone);
     }

@@ -1,20 +1,14 @@
 import React, { useState } from 'react'
 import styles from './ItemDetail.module.css'
 import ItemCount from '../ItemCount/ItemCount'
-import TallesItemDetail from './BodyItemDetail/TallesItemDetail'
 import IconosItemDetail from './BodyItemDetail/IconosItemDetail'
 import { Link, useParams } from 'react-router-dom';
-import { style } from '@mui/system'
 import Carrousel from './BodyItemDetail/Carrousel'
 
 export default function ItemDetail(product) {
-
-
-
     /* Destructuring del producto*/
     const { imagen, nombre, descripcion, cantidad, precio } = product
 
-    const { id } = useParams();
     const { categoryId } = useParams();
 
     return (
@@ -43,9 +37,9 @@ export default function ItemDetail(product) {
                         <h5 style={{ color: '#00a650', fontFamily: 'barlow semi condensed,sans-serif', fontWeight: '900' }}>3 AND 6 FREE INTEREST QUOTES</h5>
                     </div>
                     <div id={styles.descripcion}>
-                    <h3 style={{ textDecoration: 'underline', marginBottom: '0' }}>DESCRIPTION</h3>
-                    <p style={{ margin: 0, marginBottom:'20%' }}>{descripcion}</p>
-                    {<hr />}
+                        <h3 style={{ textDecoration: 'underline', marginBottom: '0' }}>DESCRIPTION</h3>
+                        <p style={{ margin: 0, marginBottom: '20%' }}>{descripcion}</p>
+                        {<hr />}
                     </div>
 
                 </div>

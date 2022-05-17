@@ -5,6 +5,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import CartDetail from './components/Cart/CartDetail';
 import CartContextProvider from './components/Context/CartContext.jsx'
+import Footer from './components/Footer/Footer';
+import Form from './components/Form.jsx/Form';
+import CompleteOrder from './components/Cart/CompleteOrder';
 
 
 
@@ -30,13 +33,16 @@ export default function App() {
 
             {/* Cart */}
             <Route exact path = '/cart' element={<CartDetail/>} />
+            {/* TEST FORM Y UPDATE FIREBASE */}
+            <Route exact path = '/form' element={<Form/>} />
+            <Route exact path = '/order' element={<CompleteOrder/>} />
 
           </Routes>
         
         
         </BrowserRouter>
       </CartContextProvider>
-
+      <Footer/>
       
       
     </>

@@ -1,5 +1,5 @@
 #navbarAllproducts{
-    background-color: #2b2d42
+    background-color: #2b2d42;
 }
 
 #botonesLink{
@@ -34,6 +34,12 @@
 }
 
 #textoNavbar{
+    background-color:black;
+    color:white;
+    height:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     overflow: hidden;
     white-space:nowrap;
     animation: cambiar 15s infinite;
@@ -49,4 +55,44 @@
     100%{margin-right: 150%}
 }
 
+@media (max-width: 1350px) {
 
+    #textoNavbar{
+        font-size: 14px;
+    }
+
+    @keyframes cambiar {
+        0%{margin-right: -150%}
+
+        40%{margin-right: 0}
+        50%{margin-right: 0}
+        60%{margin-right: 0}
+    
+        100%{margin-right: 150%}
+    }
+
+}
+
+@media (max-width: 960px) {
+    #containerNavbar{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
+
+    #textoNavbar{
+        font-size: 11px;
+    }
+
+    @keyframes cambiar {
+        0%{margin-right: -300%}
+
+        40%{margin-right: 0}
+        50%{margin-right: 0}
+        60%{margin-right: 0}
+    
+        100%{margin-right: 150%}
+    }
+
+}

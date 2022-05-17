@@ -1,0 +1,18 @@
+#linkWidgetCart{
+    text-decoration:none;
+}
+
+#spanWidgetCart{
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    margin-bottom: 40px;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:bold;
+}

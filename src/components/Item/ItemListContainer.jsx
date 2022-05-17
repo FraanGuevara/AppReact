@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
-import { productos } from '../../utils/productos'
-import { customFetch } from '../../utils/customFetch'
 import styles from './ItemListContainer.module.css'
 import { useParams } from 'react-router-dom';
-import { Container } from '@mui/material';
-import { CircularProgress } from '@mui/material';
 import Loading from '../Loading/Loading';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
@@ -42,22 +38,9 @@ export default function ItemListContainer() {
                 } finally {
                     setLoading(false)
                 }
-
-
-
             })
     }, [categoryId])
 
-    /* USEEFFECT PARA TRAER LOS PRODUCTOS HARDCODEADOS */
-    /* useEffect(() => {
-        setLoading(true)
-        customFetch(1000, productos, categoryId)
-            .then(resultado => setItems(resultado))
-            .catch(error => console.log(error))
-            Setear a false el setLoading para que desaparezca el ternario y muestre el item
-            .finally(() => setLoading(false))
-    }, [categoryId])
-     */
 
     return (
         <>
