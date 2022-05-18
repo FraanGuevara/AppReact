@@ -3,9 +3,9 @@
 
 ## **--E-Commerce desarrollado en React JS con Firebase--**
 
-### 💻 [Pagina](https://music-store-firebase.web.app/)
+### 💻 [Pagina](https://auraflow.netlify.app)
 
-### 📚 [Repositorio](https://music-store-firebase.web.app/)
+### 📚 [Repositorio](https://github.com/FraanGuevara/AppReact)
 <br>
 
 
