@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0756537b.css",
-    "main.js": "/static/js/main.6f9ade55.js",
+    "main.js": "/static/js/main.56025b4d.js",
     "static/js/787.c1112931.chunk.js": "/static/js/787.c1112931.chunk.js",
     "static/media/PayPal_logo.png": "/static/media/PayPal_logo.433e08bfb2c37573c655.png",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,11 +10,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.0756537b.css.map": "/static/css/main.0756537b.css.map",
-    "main.6f9ade55.js.map": "/static/js/main.6f9ade55.js.map",
+    "main.56025b4d.js.map": "/static/js/main.56025b4d.js.map",
     "787.c1112931.chunk.js.map": "/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0756537b.css",
-    "static/js/main.6f9ade55.js"
+    "static/js/main.56025b4d.js"
   ]
 }

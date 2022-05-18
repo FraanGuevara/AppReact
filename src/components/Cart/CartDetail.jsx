@@ -24,7 +24,6 @@ export default function CartDetail() {
   }, [cart, idCompra])
 
 
-  console.log(idCompra)
   return (
     <>
       {

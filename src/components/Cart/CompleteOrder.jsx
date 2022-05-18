@@ -23,7 +23,6 @@ export default function CompleteOrder({ idCompra }) {
 
 
   /* {items.map(item => }<p> item:{item.nombre}GORRA| cantidad:{item.count} 2| precio por unidad: 30{item.precio}| subtotal: 60{item.precio * item.count}</p>)} */
-  console.log(compra)
   return (
     <>
       <div className={styles.CompleteOrder}>
