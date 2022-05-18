@@ -9,13 +9,11 @@ function Loading() {
 
   return (
     <>
-        <div id={styles.container}>
-            <CircularProgress id={styles.elementos}/>
-            <h2 id={styles.elementos} >Loading ...</h2>
-        </div>
-
+      <div id={styles.container}>
+        <CircularProgress id={styles.elementos} />
+        <h2 id={styles.elementos} >Loading ...</h2>
+      </div>
     </>
-    
   )
 }
 

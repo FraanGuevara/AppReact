@@ -11,6 +11,8 @@ import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import { motion } from 'framer-motion';
+
 
 
 
@@ -41,12 +43,24 @@ export default function ResponsiveAppBar() {
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Typography
-                variant="h6"
+                variant="h4"
                 noWrap
                 component="div"
                 sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
               >
-                AuraFlow{/* Logo */}
+                <motion.p
+                  id={styles.logo}
+                  whileTap={{
+                    rotate: '360deg',
+                    duration: '1'
+                  }}
+                  transition={{
+                    ease: 'easeInOut',
+                    type: 'spring'
+                  }}
+                >
+                  AuraFlow
+                </motion.p>
               </Typography>
               {/* ----------------------------------------------------------- */}
 
@@ -82,13 +96,6 @@ export default function ResponsiveAppBar() {
                   }}
                 >
                   <div id={styles.menuNavbar}>
-
-                    {/* Boton HOME */}
-                    <Link id={styles.botonesLink} to='/Home'>
-                      <Button id={styles.botonesStyle} variant="contained" key='Home' onClick={handleCloseNavMenu}>
-                        Home
-                      </Button>
-                    </Link>
                     {/* Boton ALL */}
                     <Link id={styles.botonesLink} to='/'>
                       <Button id={styles.botonesStyle} variant="contained" key='Home' onClick={handleCloseNavMenu}>
@@ -97,7 +104,6 @@ export default function ResponsiveAppBar() {
                     </Link>
                     {/* Boton Categories */}
                     <Button id={styles.botonStyleDisable} variant="contained">Categories</Button>
-
                     {/* Botones de las categorias */}
                     {pages.map((page) => (
                       <Link id={styles.botonesLink} to={'/category/' + page}>
@@ -109,29 +115,30 @@ export default function ResponsiveAppBar() {
                   </div>
                 </Menu>
               </Box>
-
               {/* ----------------------------------------------------------- */}
               <Typography
-                variant="h6"
+                variant="h5"
                 noWrap
                 component="div"
+                id={styles.logo}
                 sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
               >
-                AuraFlow{/* Logo Responsive*/}
+                <motion.p
+                  id={styles.logo}
+                  whileTap={{
+                    rotate: '360deg',
+                    duration: '5'
+                  }}
+                  transition={{
+                    ease: 'easeInOut',
+                    type: 'spring'
+                  }}
+                >
+                  AuraFlow
+                </motion.p>
               </Typography>
-
               {/* ----------------------------------------------------------- */}
-
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {/* Boton HOME */}
-                <Link id={styles.botonesLink} to='/Home'>
-                  <Button
-                    key='Home'
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block' }}>
-                    Home
-                  </Button>
-                </Link>
 
                 {/* Boton ALL */}
                 <Link id={styles.botonesLink} to='/'>

@@ -1,11 +1,11 @@
-import { Button } from '@mui/material';
 import React from 'react'
 import styles from './GridCartDetail.module.css';
 import paypal from '../../img/PayPal_logo.png'
-import { Link } from 'react-router-dom';
 import Form from '../Form.jsx/Form';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 export default function Summary({ cantidadDeProductos, precioTotal, buy, setIdCompra, }) {
@@ -29,10 +29,13 @@ export default function Summary({ cantidadDeProductos, precioTotal, buy, setIdCo
                 </div>
                 <h3 className={styles.total}> <p className={styles.totalParrafo}> TOTAL:</p>
                     ${precioTotal} </h3>
-                    <Button onClick={handleOpen} id={styles.botonCheckOut}>CHECKOUT </Button>
-                <Button id={styles.botonPaypal}>
-                    <img className={styles.imgPaypal} src={paypal} alt="paypal" />
-                </Button>
+                <Button onClick={handleOpen} id={styles.botonCheckOut}>CHECKOUT </Button>
+                <div className={styles.divPaypal} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: '50px' }}>
+                    <p id={styles.proximamente}>coming soon</p>
+                    <Button disabled id={styles.botonPaypal}>
+                        <img className={styles.imgPaypal} src={paypal} alt="paypal" />
+                    </Button>
+                </div>
 
                 <Modal
                     open={open}
@@ -41,10 +44,10 @@ export default function Summary({ cantidadDeProductos, precioTotal, buy, setIdCo
                     aria-describedby="modal-modal-description"
                 >
                     <Box >
-                        <Form 
-                        handleClose={handleClose}
-                        buy={buy} 
-                        setIdCompra={setIdCompra}
+                        <Form
+                            handleClose={handleClose}
+                            buy={buy}
+                            setIdCompra={setIdCompra}
                         />
                     </Box>
                 </Modal>

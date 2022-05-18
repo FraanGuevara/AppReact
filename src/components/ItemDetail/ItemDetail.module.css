@@ -8,7 +8,6 @@
 }
 
 #img {
-    /* width: 500px; */
     max-height: 500px;
     border-radius: 10px;
 }
@@ -24,9 +23,6 @@
     margin-top: 3%;
 }
 
-/* #DivNameDesc{
-    width: 100%;
-} */
 
 #textCategory {
     color: #0077ff;
@@ -75,12 +71,13 @@
         max-height: 200px;
         border-radius: 10px;
     }
-    
+
     #carrousel {
         margin-top: 15%;
         height: 450px;
         width: 400px;
     }
+
     #imagenCarrousel {
         max-width: 400px;
         max-height: 350px;
@@ -120,12 +117,13 @@
         max-height: 200px;
         border-radius: 10px;
     }
-    
+
     #carrousel {
         margin-top: 15%;
         height: 350px;
         width: 300px;
     }
+
     #imagenCarrousel {
         max-width: 300px;
         max-height: 250px;
@@ -144,7 +142,7 @@
         margin: 0;
     }
 
-    #iconosDetail{
+    #iconosDetail {
         margin-top: 10%;
     }
 }

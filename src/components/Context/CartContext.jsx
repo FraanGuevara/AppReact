@@ -6,9 +6,11 @@ import React from 'react'
 export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
+
   /* Estado del ID de la compra realizada */
   const [idCompra, setIdCompra] = useState("");
 
+  /*  Estado del carrito*/
   const [cart, setCart] = useState(() => {
     try {
       const productosEnLocalStorage = localStorage.getItem('cartProductos');
@@ -18,11 +20,12 @@ const CartContextProvider = ({ children }) => {
     }
   });
 
+  /*  UseEffect para guardar el carrito en el localStorage*/
   useEffect(() => {
     localStorage.setItem('cartProductos', JSON.stringify(cart));
   }, [cart]);
 
-  
+
   /* -------------------- */
   /* Funcion para agregar items al carrito */
   const addToCart = (item) => {
@@ -41,7 +44,7 @@ const CartContextProvider = ({ children }) => {
     const removeCart = (id) => {
       setCart(cart.filter(item => item.id !== id));
     };
-/* Funcion para retirar unidades del producto en el carrito */
+    /* Funcion para retirar unidades del producto en el carrito */
     const eliminarUnidad = (id) => {
       let producto = cart.findIndex(item => item.id === id);
       if (producto !== -1) {
@@ -76,7 +79,7 @@ const CartContextProvider = ({ children }) => {
 
   return (
     <>
-      <CartContext.Provider value={{ cart, addToCart, buy, removeCartAll, sacarProducto, cantidadTotalProductos, precioTotalProductos, idCompra, setIdCompra}}>
+      <CartContext.Provider value={{ cart, addToCart, buy, removeCartAll, sacarProducto, cantidadTotalProductos, precioTotalProductos, idCompra, setIdCompra }}>
         {children}
       </CartContext.Provider>
 

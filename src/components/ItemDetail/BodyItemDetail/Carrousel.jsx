@@ -1,4 +1,3 @@
-import { stringify } from '@firebase/util';
 import React from 'react';
 import Slider from "react-slick";
 import styles from '../ItemDetail.module.css'
@@ -12,31 +11,25 @@ export default function Carrousel({ imagen }) {
         speed: 300,
         fade: true,
         cssEase: 'linear',
-        adaptiveHeight:false
+        adaptiveHeight: false
     };
 
 
     return (
         <>
-        <div id={styles.carrousel}>
-            <Slider {...settings}>
-                {imagen.map((foto)=>{
-                    return(
-                    <>
-                    <div>
-                    <img id={styles.imagenCarrousel}  src={foto} />
-                    </div>
-                    </>
-                    
-                    )
-                        
-                    
-                })}
-            </Slider>
-
-        </div>
-
-
+            <div id={styles.carrousel}>
+                <Slider {...settings}>
+                    {imagen.map((foto) => {
+                        return (
+                            <>
+                                <div>
+                                    <img id={styles.imagenCarrousel} src={foto} />
+                                </div>
+                            </>
+                        )
+                    })}
+                </Slider>
+            </div>
         </>
     )
 }

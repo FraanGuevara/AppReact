@@ -1,33 +1,38 @@
-
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin-top: 5%;
     height: 100vh;
 }
-.formularioContainer{
+
+.formularioContainer {
     background-color: white;
     display: flex;
     flex-direction: column;
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; */
     justify-content: center;
     align-items: center;
     min-width: 600px;
     min-height: 400px;
-    border: solid 2px blue;
+    border: solid 4px #4343;
+    border-radius: 20px;
 }
 
-#formularioInput{
-    /* border: solid 1px black; */
+#formularioInput {
     width: 300px;
-    margin: 25px ;
+    margin: 25px;
 }
 
-.containerBoton{
+.containerBoton {
+    margin: 10px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+@media (max-width: 960px) {
+    .formularioContainer {
+        min-width: 200px;
+    }
 }

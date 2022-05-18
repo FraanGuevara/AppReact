@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './ItemDetail.module.css'
 import ItemCount from '../ItemCount/ItemCount'
 import IconosItemDetail from './BodyItemDetail/IconosItemDetail'
-import { Link, useParams } from 'react-router-dom';
 import Carrousel from './BodyItemDetail/Carrousel'
+import { Link, useParams } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function ItemDetail(product) {
     /* Destructuring del producto*/
@@ -19,14 +20,18 @@ export default function ItemDetail(product) {
                 <Link id={styles.textCategory} to={'/category/' + categoryId}>{categoryId}</Link> {'>'} {nombre}
             </div>
 
-
-            <div className={styles.contenedor}>
-
+            <motion.div
+                initial={{ x: -500 }}
+                animate={{ x: 0 }}
+                transition={{
+                    ease: 'easeInOut',
+                    type: 'spring'
+                }}
+                className={styles.contenedor}>
                 {/* Imagen */}
                 <div id={styles.divImg}>
                     <Carrousel imagen={imagen} />
                 </div>
-
                 {/* Nombre y descripcion */}
                 <div id={styles.DivNameDesc}>
                     <div id={styles.nombrePrecio}>
@@ -41,21 +46,18 @@ export default function ItemDetail(product) {
                         <p style={{ margin: 0, marginBottom: '20%' }}>{descripcion}</p>
                         {<hr />}
                     </div>
-
                 </div>
-
                 {/* Div item count */}
                 <div id={styles.divItemCount}>
                     <ItemCount
                         stock={cantidad}
                         product={product} />
                 </div>
-
                 {/* Div Iconos */}
                 <div id={styles.iconosDetail}>
                     <IconosItemDetail />
                 </div>
-            </div>
+            </motion.div>
 
 
         </>

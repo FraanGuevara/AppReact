@@ -1,19 +1,23 @@
 import React from 'react'
-import { Button, FormControl, FormHelperText, Input, InputLabel } from '@mui/material';
 import styles from './Form.module.css';
+import { Button, FormControl, FormHelperText, Input, InputLabel } from '@mui/material';
+import { motion } from 'framer-motion';
 
 
-export default function FormDetail({ name, email, phone, address, setName, setEmail, setPhone, setAddress, enviarOrder, handleClose}) {
-    
+export default function FormDetail({ name, email, phone, address, setName, setEmail, setPhone, setAddress, enviarOrder, handleClose }) {
 
     return (
         <>
-            <div className={styles.container}>
-                <form className={styles.formularioContainer} onSubmit={(e) => { e.preventDefault(); enviarOrder();  }}>
-                    <h3>Formulario de compra</h3>
+            <motion.div
+                initial={{ scale: 0 }}
+                transition={{ duration: 0.5 }}
+                animate={{ scale: 1 }}
+                className={styles.container}>
+                <form className={styles.formularioContainer} onSubmit={(e) => { e.preventDefault(); enviarOrder(); }}>
+                    <h3>Purchase form</h3>
                     <FormControl id={styles.formularioInput}>
                         <InputLabel htmlFor='name'>Name</InputLabel>
-                        <Input required id='name' type='text' aria-describedby='name-helper' value={name}
+                        <Input required inputProps={{ inputMode: 'text', pattern: "[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" }} id='name' type='text' aria-describedby='name-helper' value={name}
                             onChange={(e) => {
                                 setName(e.currentTarget.value);
                             }} />
@@ -22,7 +26,7 @@ export default function FormDetail({ name, email, phone, address, setName, setEm
 
                     <FormControl id={styles.formularioInput}>
                         <InputLabel htmlFor='email'>Email</InputLabel>
-                        <Input required id='email' type='email' aria-describedby='email-helper' value={email}
+                        <Input required inputProps={{ inputMode: 'email', pattern: "[^@\s]+@[^@\s]+\.[^@\s]+" }} id='email' type='email' aria-describedby='email-helper' value={email}
                             onChange={(e) => {
                                 setEmail(e.currentTarget.value);
                             }} />
@@ -31,7 +35,7 @@ export default function FormDetail({ name, email, phone, address, setName, setEm
 
                     <FormControl id={styles.formularioInput}>
                         <InputLabel htmlFor='phone'>Phone</InputLabel>
-                        <Input required id='phone' type='phone' aria-describedby='phone-helper' value={phone}
+                        <Input required inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} id='phone' type='numeric' aria-describedby='phone-helper' value={phone}
                             onChange={(e) => {
                                 setPhone(e.currentTarget.value);
                             }} />
@@ -47,11 +51,11 @@ export default function FormDetail({ name, email, phone, address, setName, setEm
                         <FormHelperText id='address-helper'>address for shipping</FormHelperText>
                     </FormControl>
                     <div className={styles.containerBoton}>
-                    <Button type='button' onClick={handleClose}>Cerrar</Button>
-                    <Button type='submit'>ENVIAR</Button>
+                        <Button type='button' onClick={handleClose}>Cerrar</Button>
+                        <Button type='submit'>ENVIAR</Button>
                     </div>
                 </form>
-            </div>
+            </motion.div >
 
         </>
     )

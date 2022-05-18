@@ -1,40 +1,38 @@
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
-.contenedorItemCount{
+.contenedorItemCount {
     margin: 10px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border:solid 2px white;
+    border: solid 2px white;
     border-radius: 5px;
     background-color: white;
 }
 
-.contador{
+.contador {
     margin: 0 15px;
     font-weight: 600;
-    
+
 }
 
-.leyendaItemList{
+.leyendaItemList {
     margin: 0;
 }
 
-#botones{
-    color:#f77f00;
+#botones {
+    color: #f77f00;
     height: 50px;
 }
 
 
-#addToCart{
+#addToCart {
     border: #f77f00 solid 2px;
     background-color: #f77f00;
-    color:white;
+    color: white;
 }
-

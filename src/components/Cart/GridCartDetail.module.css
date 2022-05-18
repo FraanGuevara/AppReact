@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-#h2Cart{
+
+
+#h2Cart {
     font-family: 'Bebas Neue', cursive;
-    font-size:40px;
-    color:#f77f00;
+    font-size: 40px;
+    color: #f77f00;
 }
 
-#botonRemoverCart{
-height: 50px;
-background-color: #edf2f4;
+#botonRemoverCart {
+    height: 50px;
+    background-color: #edf2f4;
 }
 
-.containerCart{
-    display: flex; 
-    justify-content:center; 
-    align-items:flex-start;
+.containerCart {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.sectionItemCartContainer{
-    margin-top: 5%; 
-    width:55%;
+.sectionItemCartContainer {
+    margin-top: 5%;
+    width: 55%;
 }
 
-.sectionItemCart{
+.sectionItemCart {
     width: 85%;
     display: flex;
     justify-content: space-around;
@@ -32,21 +34,22 @@ background-color: #edf2f4;
     border-radius: 10px;
     background-color: #edf2f4;
 }
-.sectionDescripcionCard{
-    width:50%;
+
+.sectionDescripcionCard {
+    width: 50%;
 }
 
-.botonRemoveCarrito{
+.botonRemoveCarrito {
     color: black !important;
 }
 
-.imagenCard{
+.imagenCard {
     border-radius: 10px;
     object-fit: contain;
 }
 
 /* ----------------------------------------- */
-.cardComprar{
+.cardComprar {
     background-color: #2b2d42;
     color: #fff;
     width: 350px;
@@ -59,12 +62,13 @@ background-color: #edf2f4;
     right: 0;
 }
 
-.summary{
+.summary {
     font-family: 'Bebas Neue', cursive;
     font-weight: 100;
     font-size: 30px;
 }
-.cantidadProductos{
+
+.cantidadProductos {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,7 +77,7 @@ background-color: #edf2f4;
     font-weight: 600;
 }
 
-.subtotal{
+.subtotal {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,7 +86,7 @@ background-color: #edf2f4;
     font-weight: 600;
 }
 
-.envios{
+.envios {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,13 +94,14 @@ background-color: #edf2f4;
     font-size: 15px;
     font-weight: 600;
 }
-.envioFree{
+
+.envioFree {
     color: green;
     display: inline;
     font-size: 15px;
 }
 
-.tax{
+.tax {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,21 +110,21 @@ background-color: #edf2f4;
     font-weight: 600;
 }
 
-.total{
+.total {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 25px;
 }
 
-.totalParrafo{
+.totalParrafo {
     font-family: 'Bebas Neue', cursive;
     font-weight: 100;
 }
 
-#botonCheckOut{
+#botonCheckOut {
     height: 50px;
-    margin: 10px 0 ;
+    margin: 10px 0;
     background-color: #f77f00;
     color: #fff;
     border-radius: 50px;
@@ -127,37 +132,63 @@ background-color: #edf2f4;
     font-size: 20px;
 }
 
-#botonPaypal{
+.divPaypal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    height: 65px;
+}
+
+#botonPaypal {
     height: 50px;
     margin: 10px 0;
     background-color: #fff;
     color: #fff;
     border-radius: 50px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 
-.imgPaypal{
+.imgPaypal {
     width: 60px;
+    margin-top: 10px;
+}
+
+#proximamente {
+    color: rgb(0, 119, 255);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
 }
 
 @media (max-width: 1350px) {
 
-    #h2Cart{
-        margin-left: 20px ;
+    #leyendaCarritoVacio {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 20%;
     }
-    .containerCart{
-        display:flex;
+
+    #h2Cart {
+        margin-left: 20px;
+    }
+
+    .containerCart {
+        display: flex;
         flex-direction: column;
-        justify-content:center; 
-        align-items:center;
+        justify-content: center;
+        align-items: center;
         max-width: 100%;
     }
 
-    .sectionItemCartContainer{
-        margin-top: 5%; 
-        width:70%;
+    .sectionItemCartContainer {
+        margin-top: 5%;
+        width: 70%;
     }
 
-    .sectionItemCart{
+    .sectionItemCart {
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -167,16 +198,17 @@ background-color: #edf2f4;
         border-radius: 10px;
         background-color: #edf2f4;
     }
-    
-    .botonRemoveCarrito{
+
+    .botonRemoveCarrito {
         color: black !important;
     }
-    
-    .imagenCard{
+
+    .imagenCard {
         border-radius: 10px;
         object-fit: contain;
     }
-    .cardComprar{
+
+    .cardComprar {
         background-color: #2b2d42;
         color: #fff;
         width: 300px;
@@ -187,38 +219,46 @@ background-color: #edf2f4;
         display: grid;
         grid-template-columns: auto;
     }
-    .sectionimagenCard{
+
+    .sectionimagenCard {
         max-width: 150px;
         margin-right: 30px;
     }
 
-    .sectionDescripcionCard{
-    width: 100% ;
-    font-size: 13px;
+    .sectionDescripcionCard {
+        width: 100%;
+        font-size: 13px;
     }
 }
 
 
 @media (max-width: 960px) {
 
-    #h2Cart{
-        margin-left: 20px ;
+    #leyendaCarritoVacio {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20%;
     }
-    .containerCart{
-        display:flex;
+
+    #h2Cart {
+        margin-left: 20px;
+    }
+
+    .containerCart {
+        display: flex;
         flex-direction: column;
-        justify-content:center; 
-        align-items:center;
+        justify-content: center;
+        align-items: center;
         margin: 3%;
         min-width: 350px
     }
 
-    .sectionItemCartContainer{
-        margin-top: 5%; 
-        width:100%;
+    .sectionItemCartContainer {
+        margin-top: 5%;
+        width: 100%;
     }
 
-    .sectionItemCart{
+    .sectionItemCart {
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -228,16 +268,17 @@ background-color: #edf2f4;
         border-radius: 10px;
         background-color: #edf2f4;
     }
-    
-    .botonRemoveCarrito{
+
+    .botonRemoveCarrito {
         color: black !important;
     }
-    
-    .imagenCard{
+
+    .imagenCard {
         border-radius: 10px;
         object-fit: contain;
     }
-    .cardComprar{
+
+    .cardComprar {
         background-color: #2b2d42;
         color: #fff;
         width: 300px;
@@ -248,13 +289,14 @@ background-color: #edf2f4;
         display: grid;
         grid-template-columns: auto;
     }
-    .sectionimagenCard{
+
+    .sectionimagenCard {
         max-width: 150px;
         margin-right: 30px;
     }
 
-    .sectionDescripcionCard{
-    width: 100% ;
-    font-size: 13px;
+    .sectionDescripcionCard {
+        width: 100%;
+        font-size: 13px;
     }
 }

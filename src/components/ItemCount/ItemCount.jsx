@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
 import { Button } from '@mui/material';
+import { CartContext } from '../Context/CartContext'
 import styles from './ItemCount.module.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { CartContext } from '../Context/CartContext'
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert'
 
@@ -14,11 +14,9 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 export default function ItemCount({ stock, product }) {
 
     const [count, setCount] = useState(1);
+    const [open, setOpen] = React.useState(false);
     const { addToCart } = useContext(CartContext);
     const itemAddCount = { ...product, count }
-
-
-    const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {
         setOpen(true);
@@ -27,11 +25,8 @@ export default function ItemCount({ stock, product }) {
         if (reason === 'clickaway') {
             return;
         }
-
         setOpen(false);
     };
-
-
 
 
     function adding() {
@@ -46,45 +41,34 @@ export default function ItemCount({ stock, product }) {
         }
     }
 
-    /*     function onAdd(){
-            return alert(`Agregaste ${count} articulos al carrito`)
-        } */
 
     return (
         <>
             <div className={styles.container}>
-                { stock > 0 ? 
-                <>
-                <div className={styles.contenedorItemCount} >
+                {stock > 0 ?
+                    <>
+                        <div className={styles.contenedorItemCount} >
+                            <Button id={styles.botones} onClick={subtract}> <ArrowBackIosIcon sx={{ fontSize: 15 }} /> </Button>
+                            <p className={styles.contador}>{count}</p>
+                            <Button id={styles.botones} onClick={adding} > <ArrowForwardIosIcon sx={{ fontSize: 15 }} /> </Button>
+                        </div>
+                        <Button variant="outlined" id={styles.addToCart}
+                            onClick={() => {
+                                addToCart(itemAddCount);
+                                setCount(1);
+                                handleClick();
+                            }}> ADD TO CART</Button>
 
-                    <Button id={styles.botones} onClick={subtract}> <ArrowBackIosIcon sx={{ fontSize: 15 }} /> </Button>
-
-                    <p className={styles.contador}>{count}</p>
-
-                    <Button id={styles.botones} onClick={adding} > <ArrowForwardIosIcon sx={{ fontSize: 15 }} /> </Button>
-
-                </div>
-                {/* <div id={styles.addToCartDiv}> */}
-                <Button variant="outlined" id={styles.addToCart}
-                    onClick={() => {
-                        addToCart(itemAddCount);
-                        setCount(1);
-                        handleClick();
-                    }}> ADD TO CART</Button>
-
-                {/* Notificacion cuando se agrega al carrito */}
-                <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-                    <Alert onClose={handleClose} severity="success" sx={{ width: '200px' }}>
-                        Added to cart
-                    </Alert>
-                </Snackbar>
-                {/* </div> */}
-                </>
-            :
-            <h2>OUT OF STOCK</h2>
+                        {/* Notificacion cuando se agrega al carrito */}
+                        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                            <Alert onClose={handleClose} severity="success" sx={{ width: '200px' }}>
+                                Added to cart
+                            </Alert>
+                        </Snackbar>
+                    </>
+                    :
+                    <h2>OUT OF STOCK</h2>
                 }
-                
-
             </div>
         </>
     )

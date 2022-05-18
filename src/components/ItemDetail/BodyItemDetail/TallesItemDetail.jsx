@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import { grey, deepPurple } from '@mui/material/colors';
 
 export default function TallesItemDetail() {
-  
+
 
 
   return (
@@ -17,12 +17,11 @@ export default function TallesItemDetail() {
           aria-labelledby="demo-row-radio-buttons-group-label"
           name="row-radio-buttons-group"
         >
-          <FormControlLabel value="S" control={<Radio sx={{color: grey[900],'&.Mui-checked': {color: deepPurple[300],},}} />} label="S" />
-
-          <FormControlLabel value="M" control={<Radio sx={{color: grey[900],'&.Mui-checked': {color: deepPurple[300],},}} />} label="M" />
-          <FormControlLabel value="L" control={<Radio sx={{color: grey[900],'&.Mui-checked': {color: deepPurple[300],},}} />} label="L" />
-          <FormControlLabel value="XL" control={<Radio sx={{color: grey[900],'&.Mui-checked': {color: deepPurple[300],},}} />} label="XL" />
-          <FormControlLabel value="2XL" control={<Radio sx={{color: grey[900],'&.Mui-checked': {color: deepPurple[300],},}} />} label="2XL" />
+          <FormControlLabel value="S" control={<Radio sx={{ color: grey[900], '&.Mui-checked': { color: deepPurple[300], }, }} />} label="S" />
+          <FormControlLabel value="M" control={<Radio sx={{ color: grey[900], '&.Mui-checked': { color: deepPurple[300], }, }} />} label="M" />
+          <FormControlLabel value="L" control={<Radio sx={{ color: grey[900], '&.Mui-checked': { color: deepPurple[300], }, }} />} label="L" />
+          <FormControlLabel value="XL" control={<Radio sx={{ color: grey[900], '&.Mui-checked': { color: deepPurple[300], }, }} />} label="XL" />
+          <FormControlLabel value="2XL" control={<Radio sx={{ color: grey[900], '&.Mui-checked': { color: deepPurple[300], }, }} />} label="2XL" />
         </RadioGroup>
       </FormControl>
     </>

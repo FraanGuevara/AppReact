@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Card } from '@mui/material';
 import { CardMedia } from '@mui/material'
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import styles from './GridCartDetail.module.css';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Link } from 'react-router-dom';
 import Summary from './Summary';
 
 
 
-export default function GridCartDetail({ cart, removeCartAll, sacarProducto, cantidadTotalProductos, precioTotalProductos, buy, setIdCompra}) {
+export default function GridCartDetail({ cart, removeCartAll, sacarProducto, cantidadTotalProductos, precioTotalProductos, buy, setIdCompra }) {
 
 
     const [cantidadDeProductos, setCantidadDeProductos] = useState(0);
@@ -27,10 +28,13 @@ export default function GridCartDetail({ cart, removeCartAll, sacarProducto, can
 
     return (
         <>
-
-            <div className={styles.containerCart}>
+            <motion.div
+                initial={{ scale: 0 }}
+                transition={{ duration: 0.5 }}
+                animate={{ scale: 1 }}
+                className={styles.containerCart}>
                 <div className={styles.sectionItemCartContainer}>
-                    <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <h2 id={styles.h2Cart}>CART</h2>
                         <Button id={styles.botonRemoverCart} onClick={() => removeCartAll()}>Remove all cart</Button>
                     </div>
@@ -81,7 +85,7 @@ export default function GridCartDetail({ cart, removeCartAll, sacarProducto, can
                     buy={buy}
                     setIdCompra={setIdCompra}
                 />
-            </div>
+            </motion.div>
         </>
 
     );

@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import ItemList from './ItemList';
 import styles from './ItemListContainer.module.css'
-import { useParams } from 'react-router-dom';
 import Loading from '../Loading/Loading';
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 export default function ItemListContainer() {
 
-    const [items, setItems] = useState([]);
-
     const { categoryId } = useParams();
 
+    const [items, setItems] = useState([]);
     /* loading */
     const [loading, setLoading] = useState(true)
 
@@ -24,15 +23,12 @@ export default function ItemListContainer() {
             .then((res) => {
                 try {
                     const data = res.docs.map((item) => ({ id: item.id, ...item.data() }))
-
                     const productosFiltrados = data.filter((data) => data.category === categoryId);
-
                     if (categoryId) {
                         setItems(productosFiltrados);
                     } else {
                         setItems(data);
                     }
-
                 } catch (error) {
                     console.log(error)
                 } finally {

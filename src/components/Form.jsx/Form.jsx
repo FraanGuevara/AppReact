@@ -3,7 +3,7 @@ import { CartContext } from '../Context/CartContext'
 import { collection, getFirestore, addDoc } from 'firebase/firestore';
 import FormDetail from './FormDetail';
 
-export default function Form({ handleClose, buy, setIdCompra}) {
+export default function Form({ handleClose, buy, setIdCompra }) {
 
     const { cart, precioTotalProductos } = useContext(CartContext);
     const [name, setName] = useState('');
@@ -29,34 +29,25 @@ export default function Form({ handleClose, buy, setIdCompra}) {
             setIdCompra(id)
             buy();
         });
-
     }
 
-
-    /*     useEffect(() => {
-            const db = getFirestore();
-            const ventasRef = collection(db, 'ventas')
-            addDoc(ventasRef, order).then(({ id }) => {
-                console.log(id)
-            });
-        }, [checkoutID]) */
 
 
     return (
         <>
-                    <FormDetail
-                    name={name}
-                    email={email}
-                    phone={phone}
-                    adress={address}
-                    setName={setName}
-                    setEmail={setEmail}
-                    setPhone={setPhone}
-                    setAddress={setAddress}
-                    enviarOrder={enviarOrder}
-                    handleClose={handleClose}
-                    buy={buy}
-                />
+            <FormDetail
+                name={name}
+                email={email}
+                phone={phone}
+                adress={address}
+                setName={setName}
+                setEmail={setEmail}
+                setPhone={setPhone}
+                setAddress={setAddress}
+                enviarOrder={enviarOrder}
+                handleClose={handleClose}
+                buy={buy}
+            />
 
         </>
     )
